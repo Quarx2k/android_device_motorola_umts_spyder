@@ -22,10 +22,9 @@
                          AudioDecoderCap)>
 <!ELEMENT CamcorderProfiles (EncoderProfile+, ImageEncoding+, ImageDecoding, Camera)>
 <!ELEMENT EncoderProfile (Video, Audio)>
-<!ATTLIST EncoderProfile quality (high|low) #REQUIRED>
+<!ATTLIST EncoderProfile quality (high|mid|low) #REQUIRED>
 <!ATTLIST EncoderProfile fileFormat (mp4|3gp) #REQUIRED>
 <!ATTLIST EncoderProfile duration (30|60) #REQUIRED>
-<!ATTLIST EncoderProfile cameraId (0|1) #REQUIRED>
 <!ELEMENT Video EMPTY>
 <!ATTLIST Video codec (h264|h263|m4v) #REQUIRED>
 <!ATTLIST Video bitRate CDATA #REQUIRED>
@@ -38,7 +37,7 @@
 <!ATTLIST Audio sampleRate CDATA #REQUIRED>
 <!ATTLIST Audio channels (1|2) #REQUIRED>
 <!ELEMENT ImageEncoding EMPTY>
-<!ATTLIST ImageEncoding quality (90|80|70|60|50|40) #REQUIRED>
+<!ATTLIST ImageEncoding quality (100|80|70|60|50|40) #REQUIRED>
 <!ELEMENT ImageDecoding EMPTY>
 <!ATTLIST ImageDecoding memCap CDATA #REQUIRED>
 <!ELEMENT Camera EMPTY>
@@ -69,23 +68,13 @@
 <!ATTLIST VideoDecoderCap name (wmv) #REQUIRED>
 <!ATTLIST VideoDecoderCap enabled (true|false) #REQUIRED>
 <!ELEMENT AudioDecoderCap EMPTY>
-<!ATTLIST AudioDecoderCap name (wma|qcp|evrc) #REQUIRED>
+<!ATTLIST AudioDecoderCap name (wma) #REQUIRED>
 <!ATTLIST AudioDecoderCap enabled (true|false) #REQUIRED>
-<!ELEMENT VideoEditorCap EMPTY>
-<!ATTLIST VideoEditorCap maxInputFrameWidth CDATA #REQUIRED>
-<!ATTLIST VideoEditorCap maxInputFrameHeight CDATA #REQUIRED>
-<!ATTLIST VideoEditorCap maxOutputFrameWidth CDATA #REQUIRED>
-<!ATTLIST VideoEditorCap maxOutputFrameHeight CDATA #REQUIRED>
-<!ATTLIST VideoEditorCap maxPrefetchYUVFrames CDATA #REQUIRED>
-<!ELEMENT ExportVideoProfile EMPTY>
-<!ATTLIST ExportVideoProfile name (h264|h263|m4v) #REQUIRED>
-<!ATTLIST ExportVideoProfile profile CDATA #REQUIRED>
-<!ATTLIST ExportVideoProfile level CDATA #REQUIRED>
 ]>
 <!--
      This file is used to declare the multimedia profiles and capabilities
      on an android-powered device.
--->
+--> 
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <CamcorderProfiles cameraId="0">
@@ -96,12 +85,10 @@
                    width="1920"
                    height="1080"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
                    channels="2" />
-
         </EncoderProfile>
 
         <EncoderProfile quality="low" fileFormat="mp4" duration="30">
@@ -110,12 +97,10 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
                     channels="2" />
-
          </EncoderProfile>
 
         <EncoderProfile quality="1080p" fileFormat="mp4" duration="60">
@@ -124,7 +109,6 @@
                    width="1920"
                    height="1080"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -138,12 +122,10 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
                    channels="2" />
-
         </EncoderProfile>
 
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
@@ -152,7 +134,6 @@
                     width="720"
                     height="480"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -165,7 +146,6 @@
                     width="640"
                     height="480"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -178,7 +158,6 @@
                     width="352"
                     height="288"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -191,7 +170,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -204,7 +182,6 @@
                    width="1920"
                    height="1080"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -218,7 +195,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -231,7 +207,6 @@
                    width="1920"
                    height="1080"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -245,7 +220,6 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -259,7 +233,6 @@
                     width="720"
                     height="480"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -272,7 +245,6 @@
                     width="352"
                     height="288"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -285,7 +257,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -310,7 +281,6 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -324,7 +294,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -338,7 +307,6 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -352,7 +320,6 @@
                     width="720"
                     height="480"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -365,7 +332,6 @@
                     width="640"
                     height="480"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -378,7 +344,6 @@
                     width="352"
                     height="288"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -391,7 +356,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -404,7 +368,6 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -418,7 +381,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -432,7 +394,6 @@
                    width="1280"
                    height="720"
                    frameRate="30" />
-
             <Audio codec="aac"
                    bitRate="128000"
                    sampleRate="44100"
@@ -446,7 +407,6 @@
                     width="720"
                     height="480"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -459,7 +419,6 @@
                     width="352"
                     height="288"
                     frameRate="30" />
-
              <Audio codec="aac"
                     bitRate="128000"
                     sampleRate="44100"
@@ -472,7 +431,6 @@
                     width="320"
                     height="240"
                     frameRate="15" />
-
              <Audio codec="aac"
                     bitRate="64000"
                     sampleRate="44100"
@@ -524,38 +482,4 @@
         minSampleRate="8000" maxSampleRate="8000"
         minChannels="1" maxChannels="1" />
 
-    <!--
-        FIXME:
-        We do not check decoder capabilities at present
-        At present, we only check whether windows media is visible
-        for TEST applications. For other applications, we do
-        not perform any checks at all.
-    -->
-    <VideoDecoderCap name="wmv" enabled="true"/>
-    <AudioDecoderCap name="wma" enabled="true"/>
-    <AudioDecoderCap name="qcp" enabled="false"/>
-    <AudioDecoderCap name="evrc" enabled="false"/>
-    <VideoEditorCap  maxInputFrameWidth="1920"
-        maxInputFrameHeight="1080" maxOutputFrameWidth="1920"
-        maxOutputFrameHeight="1080" maxPrefetchYUVFrames="10"/>
-    <!--
-        The VideoEditor Export codec profile and level values
-        correspond to the values in OMX_Video.h.
-        E.g. for h264, profile value 1 means OMX_VIDEO_AVCProfileBaseline
-        and  level 4096 means OMX_VIDEO_AVCLevel41.
-        Please note that the values are in decimal.
-        These values are for video encoder.
-    -->
-    <!--
-      Codec = h.264, Baseline profile, level 4.1
-    -->
-    <ExportVideoProfile name="h264" profile= "1" level="4096"/>
-    <!--
-      Codec = h.263, Baseline profile, level 0
-    -->
-    <ExportVideoProfile name="h263" profile= "1" level="1"/>
-    <!--
-      Codec = mpeg4, Simple profile, level 3
-    -->
-    <ExportVideoProfile name="m4v" profile= "1" level="16"/>
 </MediaSettings>
