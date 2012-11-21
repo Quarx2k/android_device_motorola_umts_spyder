@@ -21,16 +21,6 @@
 # lines, full and umts_spyder, hence its name.
 #
 
-# Camera and Gallery
-PRODUCT_PACKAGES := \
-    Gallery
-
-#if we do this after the full_base_telephony is included some of these don't get picked up..
-ifeq ($(TARGET_PRODUCT),full_umts_spyder)
-PRODUCT_COPY_FILES += \
-    device/motorola/umts_spyder/prebuilt/etc/apns-conf.xml:system/etc/apns-conf.xml
-endif
-
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=umts_spyder
 
 # Inherit from those products. Most specific first.
