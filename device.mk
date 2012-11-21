@@ -26,10 +26,8 @@ PRODUCT_PACKAGES += \
 # Root files
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/root/default.prop:/root/default.prop \
-    $(DEVICE_FOLDER)/root/init.mapphone_cdma.rc:/root/init.mapphone_cdma.rc \
     $(DEVICE_FOLDER)/root/init.mapphone_umts.rc:/root/init.mapphone_umts.rc \
     $(DEVICE_FOLDER)/root/ueventd.rc:/root/ueventd.rc \
-    $(DEVICE_FOLDER)/root/ueventd.mapphone_cdma.rc:/root/ueventd.mapphone_cdma.rc \
     $(DEVICE_FOLDER)/root/ueventd.mapphone_umts.rc:/root/ueventd.mapphone_umts.rc
 
 # Kexec files and ti ducati or rootfs files
@@ -51,10 +49,8 @@ endif
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/root/default.prop:/system/etc/rootfs/default.prop \
     system/core/rootdir/init.rc:/system/etc/rootfs/init.rc \
-    $(DEVICE_FOLDER)/root/init.mapphone_cdma.rc:/system/etc/rootfs/init.mapphone_cdma.rc \
     $(DEVICE_FOLDER)/root/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_umts.rc \
     $(DEVICE_FOLDER)/root/ueventd.rc:/system/etc/rootfs/ueventd.rc \
-    $(DEVICE_FOLDER)/root/ueventd.mapphone_cdma.rc:/system/etc/rootfs/ueventd.mapphone_cdma.rc \
     $(DEVICE_FOLDER)/root/ueventd.mapphone_umts.rc:/system/etc/rootfs/ueventd.mapphone_umts.rc \
     out/target/product/umts_spyder/root/sbin/adbd:system/etc/rootfs/sbin/adbd
 endif
@@ -69,8 +65,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/prebuilt/etc/audio_policy.conf:system/etc/audio_policy.conf \
     $(DEVICE_FOLDER)/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     $(DEVICE_FOLDER)/prebuilt/etc/TICameraCameraProperties.xml:system/etc/TICameraCameraProperties.xml
-
-#    $(DEVICE_FOLDER)/prebuilt/etc/media_profiles.xml:system/etc/media_profiles.xml 
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
 ifneq ($(BOARD_USES_KEXEC),true)

@@ -6,7 +6,6 @@ ro.sf.lcd_density=240
 
 # directory assistance number
 ro.mot.ril.danlist=611,*611,#611
-#persist.ril.ecclist=911,*911,#911
 
 #CDMA-RIL modem mode;2 stands for UMTS
 persist.ril.modem.mode =2
@@ -48,13 +47,8 @@ ro.cdma.home.operator.numeric=310004
 # This is a 16.16 fixed point number
 ro.opengles.version = 131072
 
-# This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=76m
-
 # Enable HAC to also display Call Setting Menu Option.
 ro.mot.hw.HAC=1
-
-
 # Motorol,a6889c,02/Feb/2010,IKSHADOW-619
 # Proximity Sensor feature
 # 0 disable
@@ -67,10 +61,6 @@ ro.mot.hw.calibratedImager=1
 
 persist.mot.usb.mediasync = 1
 # persist.usb.android_config = 1
-
-# System property for Security Middleware Component
-ro.service.start.smc=1
-
 
 #Proximity sensor debounce time
 mot.proximity.delay=450
@@ -174,14 +164,7 @@ keyguard.no_require_sim = true
 persist.radio.ap.phonetype=1
 # END IKSTABLETWO-689
 
-# true when phone launches UI successfully, default is flase
-sys.mot.ui.launched=false
-
 ro.mot.bindervm.config=120
-
-#Whether or not to enable Mobile Hotspot
-ro.mot.mynet=true
-
 
 ## VZW Only feature ,reserve as reference
 ro.HorizontalBUA=false
@@ -280,32 +263,10 @@ ro.config.notification_sound=OnTheHunt.ogg
 ro.config.alarm_alert=Alarm_Classic.ogg
 ro.com.google.gmsversion=4.0_r2
 ro.crypto.state=unencrypted
-ro.media.enc.aud.fileformat=amr
-ro.media.enc.aud.codec=amrnb
 ro.mot.phonemode.vzw4gphone=0
 cdma_ril.libpath=/system/lib/libmoto_ril.so
-ro.media.camcorder.1080p=mp4,h264,30,15000000,aac,128000,44100,2
-ro.media.camcorder.720p=mp4,h264,30,10000000,aac,128000,44100,2
-ro.media.camcorder.d1NTSC=mp4,h264,30,6000000,aac,128000,44100,2
-ro.media.camcorder.vga=mp4,h264,30,4000000,aac,128000,44100,2
-ro.media.camcorder.cif=mp4,h264,30,1500000,aac,128000,44100,2
-ro.media.camcorder.qvga=mp4,h264,15,500000,aac,64000,44100,2
-ro.media.camcorder.mms=3gp,h264,15,128000,amrnb,12200,8000,1
-ro.media.camcorder.mmsres=qvga
-ro.camcorder.zoom=true
-ro.media.capture.maxres=5m
-ro.media.capture.fast.fps=4
-ro.media.capture.slow.fps=120
-ro.media.capture.flash=led
-ro.media.capture.flashMinV=3300000
-ro.media.capture.torchIntensity=40
-ro.media.capture.flashIntensity=100
-ro.media.capture.classification=classF
-ro.media.panorama.defres=3264x1840
-ro.media.panorama.frameres=1280x720
 ro.mot.setuptype=2
 ro.mot.internalsdcard=1
-#ro.setupwizard.mode=DISABLED
 dalvik.vm.dexopt-flags=m=y
 net.bt.name=Android
 dalvik.vm.stack-trace-file=/data/anr/traces.txt
