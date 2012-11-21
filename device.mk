@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
 
 # Modem
 PRODUCT_PACKAGES += \
-    Stk
+    Stk Torch
 
 # Root files
 PRODUCT_COPY_FILES += \
