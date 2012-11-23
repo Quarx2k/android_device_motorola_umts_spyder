@@ -26,8 +26,6 @@ on init
     symlink /storage/sdcard1 /mnt/sdcard-ext
 
     # create removable USB Mass Storage mountpoints
-    mkdir /storage/usb0 0000 system system
-    mkdir /storage/usb1 0000 system system
 
     mkdir /mnt/external1 0000 system system
 
@@ -40,7 +38,6 @@ on init
     chmod 0660 /sys/bus/usb/devices/usb2/power/control
     chown system radio /sys/bus/usb/devices/usb1/power/control
     chown system radio /sys/bus/usb/devices/usb2/power/control
-
 
 # change permission/ownership for command sys file of mdm6600 ctrl driver if present
     chown system radio /sys/class/radio/mdm6600/command
