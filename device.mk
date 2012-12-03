@@ -4,9 +4,6 @@
 
 DEVICE_FOLDER := device/motorola/umts_spyder
 
-# Device overlay
-    DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay/aosp
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/audio/alsa.omap4.so:/system/lib/hw/alsa.omap4.so \
