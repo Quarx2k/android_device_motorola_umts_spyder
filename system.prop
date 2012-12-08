@@ -41,9 +41,6 @@ persist.mot.proximity.touch=1
 #inphone calibration backup support
 ro.mot.hw.calibratedImager=1
 
-persist.mot.usb.mediasync = 1
-# persist.usb.android_config = 1
-
 #Proximity sensor debounce time
 mot.proximity.delay=450
 # disable touch below 60 pixels
@@ -204,4 +201,4 @@ persist.sys.root_access=3
 ro.hwc.legacy_api=true
 ro.product.use_charge_counter=1
 debug.sf.no_hw_vsync=1
-ro.telephony.ril.v3=writeaidonly
+ro.telephony.ril.v3=writeaidonly,signalstrength
