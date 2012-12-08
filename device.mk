@@ -49,8 +49,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/root/default.prop:/system/etc/rootfs/default.prop \
     system/core/rootdir/init.rc:/system/etc/rootfs/init.rc \
     $(DEVICE_FOLDER)/root/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_umts.rc \
+    $(DEVICE_FOLDER)/root/init.mapphone_umts.rc:/system/etc/rootfs/init.mapphone_cdma.rc \
     $(DEVICE_FOLDER)/root/ueventd.rc:/system/etc/rootfs/ueventd.rc \
     $(DEVICE_FOLDER)/root/ueventd.mapphone_umts.rc:/system/etc/rootfs/ueventd.mapphone_umts.rc \
+    $(DEVICE_FOLDER)/root/ueventd.mapphone_umts.rc:/system/etc/rootfs/ueventd.mapphone_cdma.rc \
     $(OUT)/root/sbin/adbd:system/etc/rootfs/sbin/adbd
 endif
 
