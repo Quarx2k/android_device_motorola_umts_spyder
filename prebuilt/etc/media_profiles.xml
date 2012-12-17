@@ -104,9 +104,9 @@
 
         <EncoderProfile quality="480p" fileFormat="mp4" duration="30">
              <Video codec="m4v"
-                    bitRate="10000000"
-                    width="768"
-                    height="576"
+                    bitRate="6000000"
+                    width="720"
+                    height="480"
                     frameRate="30" />
              <Audio codec="aac"
                     bitRate="128000"
