@@ -76,6 +76,8 @@ on post-fs
     insmod /system/lib/modules/cfg80211.ko
     insmod /system/lib/modules/mac80211.ko
     insmod /system/lib/modules/wl12xx.ko
+# Load BT userspace driver
+    insmod /system/lib/modules/tty_hci.ko
 
 on post-fs-data
     mkdir /data/tmp 0777 system system
